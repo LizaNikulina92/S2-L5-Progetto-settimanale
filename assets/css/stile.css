@@ -1,9 +1,142 @@
 /* IMPOSTAZIONI GENERALI */
-
+body{
+    color:#000;
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 1.8;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+h1{
+    font-size: 4rem;
+    color: #fff;
+    text-align: left;
+}
+h2{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+h3{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.headings{
+    line-height: 1.2;
+}
+a, i{
+    text-decoration: none;
+    color: #e42424;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+span{
+    text-transform: uppercase;
+}
+.btn{
+    color:#fff;
+    background-image: linear-gradient(90deg, #6cc1e2 0%, #392f7a 100%);
+    padding: 0.5em;
+}
 /* HEADER */
 
+header{
+    background-color: #fff;
+    box-shadow: 0 3px 7px #d3d3d3;
+    position: sticky;
+    top: 0;
+    padding: 1em 0 0.3em;
+}
+header div{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+input#menu-btn{
+    display: none;
+}
+input#menu-btn:checked~nav{
+    height: 7.5em;
+}
+header ul{
+    list-style: none;
+}
+header a {
+    color: #656565;
+    text-decoration: none;
+}
+header .lni{
+    font-size: 3rem;
+}
 /* MAIN */
+#banner{
+    background-color: #0000005a;
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+    padding: 3em 0 1em 0;
+    text-align: left;
+    text-shadow: 2px 2px 4px #2c2c2c;
+    color: #fff;
+}
+#banner p{
+    margin: 2em 0 1.5em 0;
+}
+section{
+    padding: 3em 0 2em;
+}
+section .lni{
+    font-size: 4rem;
+}
+.motivation{
+    margin-bottom:7%;
+}
+#blue_box{
+    background-color: #0c0633;
+    color: #fff;
+    padding: 6em 0 4.5em 0;
+}
+#blue_box p{
+    margin-bottom: 1em;
+}
+.emoji{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.emoji .lni {
+    font-size: 3rem;
+    margin-right: 0.5rem;
+}
+#future img{
+    width: 100%;
+    margin-bottom: 1em;
+}
 
 /* FOOTER */
 
 /* RESPONSIVE */
+
+@media screen and (max-width: 768px){
+    header nav{
+        height: 0;
+        overflow: hidden;
+        position:relative;
+        width: 100%;
+        transition: height 0.5 ease-out;
+    }
+}
+@media screen and (min-width: 768px){
+    header li{
+        display: inline-block;
+        margin-left: 1em;
+    }
+    header label{
+        display: none;
+    }
+}
