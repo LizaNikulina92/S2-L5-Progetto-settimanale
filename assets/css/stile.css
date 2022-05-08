@@ -24,7 +24,7 @@ h5{
     margin-bottom: 1rem;
 }
 .headings{
-    line-height: 1.2;
+    line-height: 1;
 }
 i{
     color: #e42424;
@@ -302,7 +302,7 @@ footer .lni{
         justify-content: space-between;
         margin-bottom: 4rem;
     }
-    footer p:last-child{
+    footer address p{
         text-align: center;
     }
     .info{
@@ -341,7 +341,7 @@ footer .lni{
 }
 @media screen and (min-width: 1200px){
     .headings{
-        line-height: 1;
+        line-height: 1.2;
     }
     .container{
         width: 75%;
