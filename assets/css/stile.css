@@ -9,8 +9,7 @@ body{
 }
 h1{
     font-size: 4rem;
-    color: #fff;
-    text-align: left;
+    margin-bottom: 2rem;
 }
 h2{
     font-size: 3.5rem;
@@ -20,12 +19,19 @@ h3{
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
+h5{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
 .headings{
     line-height: 1.2;
 }
-a, i{
-    text-decoration: none;
+i{
     color: #e42424;
+}
+a{
+    text-decoration: none;
+    color: #000;
 }
 .container{
     width: 85%;
@@ -37,7 +43,14 @@ span{
 .btn{
     color:#fff;
     background-image: linear-gradient(90deg, #6cc1e2 0%, #392f7a 100%);
-    padding: 0.5em;
+    padding: 0.5em 1em;
+    border: none;
+    display: inline-block;
+    font-size: 1.5rem;
+}
+.btn:hover{
+    color:#fff;
+    text-decoration: none;
 }
 /* HEADER */
 
@@ -59,7 +72,7 @@ input#menu-btn{
     display: none;
 }
 input#menu-btn:checked~nav{
-    height: 7.5em;
+    height: 8.3em;
 }
 header ul{
     list-style: none;
@@ -68,10 +81,27 @@ header a {
     color: #656565;
     text-decoration: none;
 }
+header a:hover{
+    color: #e42424;
+    text-decoration: underline;
+}
 header .lni{
     font-size: 3rem;
 }
 /* MAIN */
+@keyframes ombra{
+    from{box-shadow: 0 0 5px 5px #252525;}
+    20%{box-shadow: 0 0 5px 10px #252525a3;}
+    40%{box-shadow: 0 0 5px 15px #25252560;}
+    60%{box-shadow: 0 0 5px 20px #25252500;}
+    to{box-shadow: 0 0 5px 20px #25252500;}
+}
+#banner a{
+    animation-name: ombra;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
 #banner{
     background-color: #0000005a;
     background-image: url(../images/banner.jpg);
@@ -94,7 +124,7 @@ section .lni{
     font-size: 4rem;
 }
 .motivation{
-    margin-bottom:7%;
+    margin-bottom: 2em;
 }
 #blue_box{
     background-color: #0c0633;
@@ -107,18 +137,85 @@ section .lni{
 .emoji{
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;;
 }
 .emoji .lni {
     font-size: 3rem;
-    margin-right: 0.5rem;
+    margin: 0 0.5rem 1.5rem 0;
 }
-#future img{
+img{
     width: 100%;
-    margin-bottom: 1em;
+    margin-bottom: 1.2rem;
+}
+#future p{
+    margin-bottom: 1.6rem;
+}
+figure{
+    margin: 2rem 0;
+}
+table{
+    text-align: left;
+    width: 100%;
+    margin: 7rem 0 4rem 0;
+}
+td{
+    padding: 0.6rem;
+}
+
+#chi_siamo{
+    margin-top: 5rem;
+    padding: 0;
+} 
+
+fieldset input, fieldset textarea {
+    display: block;
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1.6em;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-style: italic;
+    border: 1px solid #7f7f7f;
+    border-radius: 0.2rem;
+}
+fieldset input::placeholder, fieldset textarea::placeholder{
+    color: #939da0;
+}
+form{
+    margin-bottom: 2.5rem;
+}
+address p{
+    margin-bottom: 2rem;
+}
+#contact{
+    padding: 6rem 0 5rem 0;
 }
 
 /* FOOTER */
+footer{
+    background-color: rgb(238, 238, 238);
+    text-align: left;
+    padding: 3rem 0 5rem;
+}
+#container_footer{
+    width: 80%;
+    margin: 0 auto;
+}
+footer input{
+    width: 100%;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+.info{
+    margin:3rem 0 1.8rem;
+}
+footer .lni{
+    font-size: 2.8rem;
+    margin: 1rem 0;
+}
+
+
 
 /* RESPONSIVE */
 
@@ -130,13 +227,142 @@ section .lni{
         width: 100%;
         transition: height 0.5 ease-out;
     }
+    #table_normal{
+        display: none;
+    }
+    #table_mobile tr:nth-child(1), #table_mobile tr:nth-child(2), #table_mobile tr:nth-child(3), #table_mobile tr:nth-child(7), #table_mobile tr:nth-child(8), #table_mobile tr:nth-child(9){
+        background-color: #d3ddec;
+    }
+    #table_mobile td, #table_mobile th{
+        border: none;
+    }
+    th{
+        font-weight: bold;
+        width: 40%;
+        padding: 0.6rem;
+    }
+
 }
 @media screen and (min-width: 768px){
+    .headings{
+        line-height: 1.1;
+    }
     header li{
         display: inline-block;
         margin-left: 1em;
     }
     header label{
         display: none;
+    }
+    #table_mobile{
+        display: none;
+    }
+    #motivation_flex{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #motivation_flex div{
+        width: 30%;
+    }
+    #motivation_flex p{
+        text-align: left;
+    }
+    #future{
+        display: flex;
+        justify-content: center;
+        align-content: stretch;
+    }
+    #fut_img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .emoji{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 1em;
+    }
+    #future p{
+        text-align: left;
+        margin-left: 1em;
+    }
+    #banner .container{
+        width: 65%;
+        padding-bottom: 2rem;
+    }
+    .container_td{
+        width: 65%;
+        margin: 0 auto;
+    }
+    .container{
+        width: 90%;
+    }
+    #cont_foot_flex{
+        display: flex;  
+        justify-content: space-between;
+        margin-bottom: 4rem;
+    }
+    footer p:last-child{
+        text-align: center;
+    }
+    .info{
+        width: 30%;
+    }
+    #chi_siamo_img{
+        display: flex;
+        justify-content: space-between;
+    }
+    #chi_siamo_img figure{
+        width: 48%;
+    }
+    table{
+        text-align: center;
+    }
+    th{
+        background-color: #6f819f;
+        color: #fff;
+        text-transform: uppercase;
+        width: 33%;
+        padding: 0.5rem 0;
+    }
+    tbody tr:nth-child(1), tbody tr:nth-child(3){
+        background-color: #d3ddec;
+    }
+    #contact_flex{
+        display: flex;
+        justify-content: space-between;
+    }
+    #contact_flex form{
+        width: 45%;
+    }
+    #info_job{
+        width: 40%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .headings{
+        line-height: 1;
+    }
+    .container{
+        width: 75%;
+    }
+    #banner .container{
+        width: 50%;
+    }
+    .container_td{
+        width: 50%;
+    }
+    #future{
+        width: 70%;
+    }
+    table{
+        width: 70%;
+        margin: 0 auto 4rem;
+    }
+    footer p:last-child{
+        margin-bottom: 0;
+    }
+    #cont_foot_flex{
+        margin-bottom: 0;
     }
 }

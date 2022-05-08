@@ -42,25 +42,26 @@
     <main>
       <div id="banner">
         <div class="container">
-          <h1 class="headings">Diventa un developer <span>epico</span></h1>
+          <h1 class="headings">Ditdventa un developer <span>epico</span></h1>
           <p>
             Diventa un developer <span>epico</span> e ti troviamo noi il lavoro.
             Scommettiamo su di te: paghi metà corso, l'altra parte solo quando
             inizi a lavorare.
           </p>
+          <div id="animazione"></div>
           <a class="btn" href="contatti.html" title="Contatti">Chiedi info</a>
         </div>
       </div>
       <section class="container">
         <div class="motivation">
           <h2 class="headings">Perchè diventare un Developer?</h2>
-          <p>
+          <p class="container_td">
             Non servono laurea e competenze specifiche, solo impegno. Segui il
             corso online, dove vuoi tu. Il lavoro che andrai a fare è veramente
             figo.
           </p>
         </div>
-        <div>
+        <div id="motivation_flex">
           <div class="motivation">
             <i class="lni lni-comments"></i>
             <h3 class="headings">Tutti ti cercheranno</h3>
@@ -96,7 +97,9 @@
         </div>
       </div>
       <section class="container" id="future">
-        <img src="assets/images/notebook.jpg" alt="Notebook" />
+        <div id="fut_img">
+          <img src="assets/images/notebook.jpg" alt="Notebook" />
+        </div>
         <div>
           <div>
             <div class="emoji">
@@ -122,6 +125,39 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div id="container_footer">
+        <div id="cont_foot_flex">
+          <div class="info">
+            <h5 class="headingd">Chi siamo</h5>
+            <p>
+              Epicode School nasce con l'obiettivo di livoluzionare la
+              formazione in ambito tech.
+            </p>
+          </div>
+          <div class="info">
+            <h5 class="headings">
+              Ti piace ciò che vedi? Condividilo con i tuoi amici!
+            </h5>
+            <a href="#"><i class="lni lni-facebook-original"></i></a>
+            <a href="#"><i class="lni lni-linkedin-original"></i></a>
+            <a href="#"><i class="lni lni-instagram-filled"></i></a>
+          </div>
+          <form class="info">
+            <legend>
+              <h5 class="headings">Iscriviti alla nostra newsletter</h5>
+            </legend>
+            <input type="email" name="email" id="email" />
+            <input type="submit" value="Va bene!" class="btn" />
+          </form>
+        </div>
+        <address>
+          <p>
+            &copy; 2021 Epicode Web Developer school - Via Appia 1, 00100 Roma
+            (RM) - Tel. 06-12345678
+          </p>
+        </address>
+      </div>
+    </footer>
   </body>
 </html>
