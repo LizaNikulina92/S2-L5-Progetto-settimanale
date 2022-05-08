@@ -161,6 +161,9 @@ table{
 td{
     padding: 0.6rem;
 }
+td, th{
+    border: 1px solid #d2dce7;
+}
 
 #chi_siamo{
     margin-top: 5rem;
@@ -232,9 +235,6 @@ footer .lni{
     }
     #table_mobile tr:nth-child(1), #table_mobile tr:nth-child(2), #table_mobile tr:nth-child(3), #table_mobile tr:nth-child(7), #table_mobile tr:nth-child(8), #table_mobile tr:nth-child(9){
         background-color: #d3ddec;
-    }
-    #table_mobile td, #table_mobile th{
-        border: none;
     }
     th{
         font-weight: bold;
